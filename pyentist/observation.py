@@ -29,9 +29,9 @@ class Observation(object):
 
         if neither_raised:
             if comparer:
-                values_are_equal = comparer(self.value, other.value)
+                values_are_equal = comparer(self.returned_value, other.returned_value)
             else:
-                values_are_equal = self.value == other.value
+                values_are_equal = self.returned_value == other.returned_value
             return values_are_equal
         elif both_raised:
             return (
