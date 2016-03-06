@@ -1,5 +1,6 @@
 # Pyentist
 Python Scientist - Port of GitHub's [Scientist](https://github.com/github/scientist) - A library for carefully refactoring critical paths
+[![Build Status](https://travis-ci.org/mpcabd/pyentist.svg?branch=master)](https://travis-ci.org/mpcabd/pyentist)
 
 ## What is this?
 
