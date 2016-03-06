@@ -4,7 +4,7 @@ from distutils.core import setup
 
 setup(
     name='Pyentist',
-    version='0.0.1',
+    version='0.0.2',
     description='Python Scientist - Port of GitHub\'s Scientist - A library for carefully refactoring critical paths',
     author='Abdullah Diab',
     author_email='mpcabd@gmail.com',
