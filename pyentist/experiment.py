@@ -131,6 +131,7 @@ class Experiment(object):
             except Exception as e:
                 self.raised('ignorer', e)
                 return False
+        return False
 
     def _can_run_if_callback_allows(self):
         if self.should_run_callback:
