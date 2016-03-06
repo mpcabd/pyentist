@@ -7,9 +7,9 @@ class Result(object):
         self.observations = observations
         self.control = control
         if control:
-            self.candidates = (o for o in observations if o != control)
+            self.candidates = tuple(o for o in observations if o != control)
         else:
-            self.candidates = observations[:]
+            self.candidates = tuple(observations[:])
         self.ignored = []
         self.mismatched = []
 
@@ -25,7 +25,7 @@ class Result(object):
 
     @property
     def was_matched(self):
-        return not self.mismatched and not self.was_ignored()
+        return not self.mismatched and not self.was_ignored
 
     @property
     def was_mismatched(self):
@@ -36,16 +36,16 @@ class Result(object):
         return bool(self.ignored)
 
     def evaluate_candidates(self):
-        mismatched = (
+        mismatched = tuple(
             candidate
             for candidate in self.candidates
-            if not self.experiment.are_observations_equivalent(control, candidate)
+            if not self.experiment.are_observations_equivalent(self.control, candidate)
         )
 
-        self.ignored = (
+        self.ignored = tuple(
             candidate
             for candidate in mismatched
-            if self.experiment.should_ignore_mismatched_observation(control, candidate)
+            if self.experiment.should_ignore_mismatched_observation(self.control, candidate)
         )
 
-        self.mismatched = (candidate for candidate in mismatched if not candidate in self.ignored)
+        self.mismatched = tuple(candidate for candidate in mismatched if not candidate in self.ignored)
