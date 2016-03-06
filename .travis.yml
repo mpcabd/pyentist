@@ -1,0 +1,9 @@
+# https://travis-ci.org/mpcabd/pyentist
+language: python
+python:
+  - "3.5"
+install:
+  - "pip install nose2"
+script:
+    - cd pyentist
+    - nose2 -s tests
