@@ -8,7 +8,8 @@ setup(
     description='Python Scientist - Port of GitHub\'s Scientist - A library for carefully refactoring critical paths',
     author='Abdullah Diab',
     author_email='mpcabd@gmail.com',
-    url='https://mpcabd.xyz/',
+    url='https://github.com/mpcabd/pyentist',
+    download_url='https://github.com/mpcabd/pyentist/tarball/0.0.2',
     packages=['pyentist'],
     license='GPLv3+',
     classifiers=[
