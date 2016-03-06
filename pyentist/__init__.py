@@ -32,7 +32,7 @@ def default_scientist_context():
     return {}
 
 __all__ = [
-    'BadBehaviorError', 'BehaviorMissingError', 'BehaviorNotUniqueError', 'NoValueError',
+    'BadBehaviorError', 'BehaviorMissingError', 'BehaviorNotUniqueError', 'NoValueError', 'MismatchError',
     'Result',
     'Experiment',
     'Observation',
