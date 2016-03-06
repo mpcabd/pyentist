@@ -149,6 +149,10 @@ class Experiment(object):
             return False
 
     def try_candidate(self, name='candidate', callback=None):
+        if not callback and hasattr(name, '__call__'):
+            callback = name
+            name = 'candidate'
+
         if not callback:
             raise AttributeError('callback must be set')
 
